@@ -1,0 +1,9 @@
+echo "🧱 Compiling theos template..."
+
+$THEOS/bin/nicify.pl ./Template &> /dev/null
+echo "📦 Compiled"
+echo "📂 Copying template..."
+mkdir -p $THEOS/templates/ios/conor > /dev/null
+cp conor_tweakwithprefs.nic.tar $THEOS/templates/ios/conor/ > /dev/null
+
+echo "✅ Template ready!"
