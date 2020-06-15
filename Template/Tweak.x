@@ -3,7 +3,7 @@ BOOL enabled;
 
 void ReloadPrefs() {
     defaults = [[NSUserDefaults alloc] initWithSuiteName:@"@@PACKAGENAME@@.prefs"];
-    [defaults registerDefaults:@{ @"enabled" : YES }];
+    [defaults registerDefaults:@{ @"enabled" : @YES }];
     
     enabled = [[defaults objectForKey:@"enabled"] boolValue];
 }
